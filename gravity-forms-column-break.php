@@ -9,6 +9,7 @@ Author URI: http://darkspire.media
 Version: 1.01
 License: GPL
 Copyright: Darkspire, Inc.
+Credit: http://www.jordancrown.com/revisited-multi-column-gravity-forms/
 */
 
 if(!class_exists('GF_Field_Column') && class_exists('GF_Field')){
