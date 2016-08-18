@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Gravity Forms: Column Break
-Plugin URI: https://github.com/darkspiremedia/gravity-forms-column-break
-Description: Adds a column break field to Gravity Forms.
+Plugin Name: Gravity Forms: Columns
+Plugin URI: https://github.com/darkspiremedia/gravity-forms-columns
+Description: Adds a column field to Gravity Forms.
 Author: Darkspire Media
 Twitter: @darkspireinc
 Author URI: http://darkspire.media
@@ -18,7 +18,7 @@ if(!class_exists('GF_Field_Column') && class_exists('GF_Field')){
         public $type = 'column';
 
         public function get_form_editor_field_title() {
-            return esc_attr__('Column Break', 'gravityforms');
+            return esc_attr__('Column', 'gravityforms');
         }
 
         public function is_conditional_logic_supported() {
@@ -85,7 +85,7 @@ add_filter('gform_field_container', 'filter_gf_field_column_container', 10, 6);
 
 function gf_field_column_scripts(){
 	if(!is_admin()){
-		wp_enqueue_style('gf-field-column',plugins_url('gravity-forms-column-break.css',__FILE__),false);
+		wp_enqueue_style('gf-field-column',plugins_url('gravity-forms-column.css',__FILE__),false);
 	}
 }
 add_action('wp_enqueue_scripts','gf_field_column_scripts');
