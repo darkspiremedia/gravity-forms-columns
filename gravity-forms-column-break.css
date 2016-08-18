@@ -1,37 +1,37 @@
-.gform_wrapper ul.gform_fields.column{
+body .gform_wrapper ul.gform_fields.column{
 	float:left;
-	padding-right:1%;
+	margin-right:1% !important;
 }
 
-.gform_wrapper ul.gform_fields.column:last-child{
-	padding-right:0;
+body .gform_wrapper ul.gform_fields.column:last-child{
+	margin-right:0 !important;
 }
 
-.gform_wrapper ul.gform_fields.column.columns_2{
+body .gform_wrapper ul.gform_fields.column.columns_2{
 	width:calc((100%/2) - (1%/2));
 }
 
-.gform_wrapper ul.gform_fields.column.columns_3{
+body .gform_wrapper ul.gform_fields.column.columns_3{
 	width:calc((100%/3) - (2%/3));
 }
 
-.gform_wrapper ul.gform_fields.column.columns_4{
+body .gform_wrapper ul.gform_fields.column.columns_4{
 	width:calc((100%/4) - (3%/4));
 }
 
-.gform_wrapper ul.gform_fields.column.columns_5{
+body .gform_wrapper ul.gform_fields.column.columns_5{
 	width:calc((100%/5) - (4%/5));
 }
 
 @media(max-width:767px){
-	.gform_wrapper ul.gform_fields.column{
+	body .gform_wrapper ul.gform_fields.column{
 		float:none;
-		padding-right:0;
+		margin-right:0 !important;
 	}
-	.gform_wrapper ul.gform_fields.column.columns_2,
-	.gform_wrapper ul.gform_fields.column.columns_3,
-	.gform_wrapper ul.gform_fields.column.columns_4,
-	.gform_wrapper ul.gform_fields.column.columns_5{
+	body .gform_wrapper ul.gform_fields.column.columns_2,
+	body .gform_wrapper ul.gform_fields.column.columns_3,
+	body .gform_wrapper ul.gform_fields.column.columns_4,
+	body .gform_wrapper ul.gform_fields.column.columns_5{
 		width:auto;
 	}
 }

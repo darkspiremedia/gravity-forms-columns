@@ -6,7 +6,7 @@ Description: Adds a column break field to Gravity Forms.
 Author: Darkspire Media
 Twitter: @darkspireinc
 Author URI: http://darkspire.media
-Version: 1.01
+Version: 1.02
 License: GPL
 Copyright: Darkspire, Inc.
 Credit: http://www.jordancrown.com/revisited-multi-column-gravity-forms/
@@ -85,7 +85,7 @@ add_filter('gform_field_container', 'filter_gf_field_column_container', 10, 6);
 
 function gf_field_column_scripts(){
 	if(!is_admin()){
-		wp_enqueue_style('gf-field-column',plugins_url('gravity-forms-column-break/gravity-forms-column-break.css',dirname(__FILE__)),false);
+		wp_enqueue_style('gf-field-column',plugins_url('gravity-forms-column-break.css',__FILE__),false);
 	}
 }
 add_action('wp_enqueue_scripts','gf_field_column_scripts');
