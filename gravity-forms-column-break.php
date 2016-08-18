@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Gravity Forms: Column Break
-Plugin URI: 
+Plugin URI: https://github.com/darkspiremedia/gravity-forms-column-break
 Description: Adds a column break field to Gravity Forms.
 Author: Darkspire Media
 Twitter: @darkspireinc
 Author URI: http://darkspire.media
-Version: 1.0
+Version: 1.01
 License: GPL
 Copyright: Darkspire, Inc.
 */
@@ -88,3 +88,23 @@ function gf_field_column_scripts(){
 	}
 }
 add_action('wp_enqueue_scripts','gf_field_column_scripts');
+
+//Added to check if Gravity Forms is installed on activation.
+function gf_field_column_activate() {
+
+    if (class_exists('RGFormsModel')) {
+            
+            return true;
+            
+        }   else {
+            
+            $html = '<div class="error">';
+                $html .= '<p>';
+                    $html .= _e( 'Warning: Gravity Forms is not installed or activated. This plugin does not function without Gravity Forms!' );
+                $html .= '</p>';
+            $html .= '</div>';
+            echo $html;
+            
+        }
+}
+register_activation_hook( __FILE__, 'gf_field_column_activate' );
